@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>TechBoost Ghana</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
     <header>
-        <img src="impact_horizon_logo.png" alt="Impact Horizon Logo">
+        <div id="logo">
+            <img src="impact_horizon_logo.png" alt="Impact Horizon Logo">
+            <h1 style="margin-left: 15px;">Impact Horizon</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Programs</a></li>
+                <li><a href="#programs">Programs</a></li>
                 <li><a href="#apply">Apply</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -27,10 +32,99 @@
         </div>
     </section>
 
+    <section id="about">
+        <div>
+            <h1>About Us</h1>
+            <h2>Impact Horizon: Pioneering Sustainable Change</h2>
+            <h3>Our Mission</h3>
+            <p>At Impact Horizon, we are dedicated to forging sustainable change across communities worldwideOur mission is grounded in three pillars: education, poverty alleviation, and environmental conservation. 
+                With a global perspective and local action, we strive to create a lasting impact that transcends borders and generations</p>
+    
+            <h3>Our Vision</h3>
+            <p>We envision a world where every community thrives on education, economic opportunities, and sustainable practicesBy empowering local early-stage entrepreneurs and startups, especially those aligning with the United Nations' Sustainable Development Goals, we are not just dreaming of a better future; we are actively building it.</p>
+    
+            <h2>TechBoost Ghana: A Digital Empowerment Initiative</h2>
+            <h3>The Challenge</h3>
+            <p>In an era marked by unprecedented challenges- from the global pandemic to economic downturns - Ghanaian SMEs face critical hurdles. Diminished revenues, operational disruptions, and the rapid shift towards digitalization have left many struggling to adapt and thrive.</p>
+    
+            <h3>Our Response: TechBoost Ghana</h3>
+            <p>TechBoost Ghana is our answer to these challenges. This initiative is more than just a project; it's a movement towards empowering SMEs in the Ga South District, Ghana, through digital transformation. In collaboration with local and international partners, we are bringing a ray of hope and a path to resilience for these businesses.</p>
+    
+            <h3>Program Highlights</h3>
+            <ul>
+                <li><strong>Digital Transformation:</strong> Implementing technology tools to streamline SME operations.</li>
+                <li><strong>Capacity Building:</strong> Training in digital marketing, financial technology, and efficient business practices.</li>
+                <li><strong>Ecosystem Development:</strong> Fostering collaborations and networks among SMEs for mutual growth.</li>
+                <li><strong>Cultural Exchange:</strong> Bridging the gap between local entrepreneurs and international Intern Facilitators to share insights and foster innovation.</li>
+                <li><strong>Sustainable Growth:</strong> Ensuring long-term progress through continuous support and the development of an alumni network.</li>             
+            </ul>
+    
+            <h3>Our Approach</h3>
+            <p>Our strategy is rooted in local engagement and global knowledge exchange. By understanding the unique challenges faced by each business, we tailor our approach, offering toolkits and customized solutions. From emergency response strategies to long-term resilience building, our focus remains steadfast: to equip SMEs with the skills and tools for sustainable success.</p>
+    
+            <h3>Join Us</h3>
+            <p>At Impact Horizon, every step we take is a stride towards a brighter, more sustainable future. Whether you're an aspiring entrepreneur, a seasoned business owner, or a like-minded organization, we invite you to join us in this transformative journey. Together, we can turn challenges into opportunities and dreams into reality.</p>
+        </div>
+    </section>
+    
+    <section id="apply">
+        <div class="apply-container">
+            <h1>Apply as an Intern Facilitator</h1>
+            <p>Join us in our mission to empower SMEs in Ghana through digital transformation. Please fill out the form below to apply.</p>
+            <form id="applyForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+    
+                <label for="resume">Upload Resume/CV:</label>
+                <input type="file" id="resume" name="resume" required>
+    
+                <label for="coverLetter">Cover Letter:</label>
+                <textarea id="coverLetter" name="coverLetter" rows="4" required></textarea>
+    
+                <input type="submit" value="Submit Application">
+            </form>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div>Contact Page</div>
+    </section>
+    <section id="programs">
+        <div>Programs Page</div>
+    </section>
+    
     <!-- Additional sections for About, Programs, etc. -->
 
     <footer>
         <!-- Footer content -->
     </footer>
+    <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                const navbarHeight = document.querySelector('nav').offsetHeight + 45;
+                const targetPosition = targetElement.offsetTop - navbarHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    </script>
 </body>
+
 </html>
