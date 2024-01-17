@@ -82,6 +82,10 @@ section {
   position: relative;
 }
 
+.ongoing{
+  border:2px,#2e81ce;
+  border-radius: 5px;
+}
 #hero::before {
   content: "";
   position: absolute;
@@ -96,14 +100,51 @@ section {
     0.5
   ); /* Adjust the last value for the opacity */
 }
-
-#hero div {
-  max-width: 600px;
-  z-index: 1;
+.hero-welcome, .project-summary-card {
+  background-color: rgba(31, 22, 3, 0.8); /* Semi-transparent white background */
+  margin: 10px;
+  padding: 20px;
+  border-radius: 30px;
 }
 
+.project-summary-card {
+  border: 2px solid #ddd; /* Square outline */
+  max-width: 300px; /* Adjust based on preference */
+}
+#techboost-details {
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#techboost-details h2 {
+  color: #0044cc;
+  margin-bottom: 10px;
+}
+
+#techboost-details h3 {
+  color: #333333;
+  margin-top: 20px;
+}
+
+#techboost-details p {
+  color: #666666;
+  line-height: 1.6;
+}
+
+#techboost-details strong {
+  color: #333333;
+}
+
+/* #hero div {
+  max-width: 600px;
+  z-index: 1;
+} */
+
 button {
-  background-color: #000;
+  background-color: #96a5b3;
   color: white;
   border: none;
   padding: 10px 20px;
